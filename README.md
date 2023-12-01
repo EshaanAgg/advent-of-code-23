@@ -1,8 +1,10 @@
 # Advent of Code '23
 
-This repository contains my solutions to [`Advent of Code 2023`](https://adventofcode.com/) so that the elves can deliver your Christmas gifts on time. Since Santa really doesn't care about what nerdy langauge I commit to, I plan on trying to be a polygot this year, and would try to solve the problems in multiple ways, as and when I get the time.
+This repository contains my solutions to `Advent of Code 2023`[^aoc] so that the elves can deliver your Christmas gifts on time. Since Santa really doesn't care about what nerdy langauge I commit to, I plan on trying to be a polygot this year, and would try to solve the problems in multiple ways, as and when I get the time.
 
 Happy holidays!
+
+`PS:` I hate the fact that I have to use 🇬 to represent `Go`. Please Unicode gods, grant us with a gopher emoji🙏.
 
 ## Progress
 
@@ -27,3 +29,8 @@ Happy holidays!
     </tr>
 
 </table>
+
+[^aoc]:
+    [Advent of Code](https://adventofcode.com) – An annual event of Christmas-oriented programming challenges started December 2015.
+    Every year since then, beginning on the first day of December, a programming puzzle is published every day for twenty-four days.
+    You can solve the puzzle and provide an answer using the language of your choice.
