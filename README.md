@@ -4,8 +4,6 @@ This repository contains my solutions to `Advent of Code 2023`[^aoc] so that the
 
 Happy holidays!
 
-`PS:` I hate the fact that I have to use 🇬 to represent `Go`. Please Unicode gods, grant us with a gopher emoji🙏.
-
 ## Progress
 
 <table>
@@ -21,6 +19,7 @@ Happy holidays!
         <td>
             <a href="./rust/src/day1.rs">🦀</a>
             <a href="./golang/day1.go">🇬</a>
+            <a href="./ocaml/bin/day1.ml">🐪</a>
         </td>
         <td>
             <a href="./rust/src/day1.rs">🦀</a>
@@ -29,6 +28,11 @@ Happy holidays!
     </tr>
 
 </table>
+
+### Disclaimers
+
+- I hate the fact that I have to use 🇬 to represent `Go`. Please Unicode gods, grant us with a gopher emoji🙏.
+- This is the first time I am using `OCaml` and I am still on the verge whether I hate it or I find it bearable. For the most part my `OCaml` code is going to resemble a lot of that the Primeagen, with me trying to take the reigns in between.
 
 [^aoc]:
     [Advent of Code](https://adventofcode.com) – An annual event of Christmas-oriented programming challenges started December 2015.
