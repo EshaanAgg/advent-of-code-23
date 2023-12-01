@@ -16,8 +16,14 @@ Happy holidays!
     <tr>
         <td>1</td>
         <td><a href="https://adventofcode.com/2023/day/1">Trebuchet?!</a></td>
-        <td><a href="./rust/src/day1.rs">🦀</a></td>
-        <td><a href="./rust/src/day1.rs">🦀</a></td>
+        <td>
+            <a href="./rust/src/day1.rs">🦀</a>
+            <a href="./golang/day1.go">🇬</a>
+        </td>
+        <td>
+            <a href="./rust/src/day1.rs">🦀</a>
+            <a href="./golang/day1.go">🇬</a>
+        </td>
     </tr>
 
 </table>
