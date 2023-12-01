@@ -1,4 +1,4 @@
-let testFile = "../data/1/test1.txt"
+let testFile = "../data/1/input.txt"
 let is_digit c = 
   match c with
   | '0'..'9' -> true
