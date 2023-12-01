@@ -1,6 +1,8 @@
 # Advent of Code '23
 
-This repository contains my solutions to the [`Advent of Code 2023`](https://adventofcode.com/). I don't plan to commit to a single language this year, and would try to solve the problems in multiple ways, as and when I get the time. Happy holidays!
+This repository contains my solutions to [`Advent of Code 2023`](https://adventofcode.com/) so that the elves can deliver your Christmas gifts on time. Since Santa really doesn't care about what nerdy langauge I commit to, I plan on trying to be a polygot this year, and would try to solve the problems in multiple ways, as and when I get the time.
+
+Happy holidays!
 
 ## Progress
 
