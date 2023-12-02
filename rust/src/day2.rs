@@ -1,5 +1,5 @@
+use anyhow::{Context, Error, Result};
 use std::cmp::max;
-use std::fmt::Error;
 use std::fs;
 use std::str::FromStr;
 
@@ -14,25 +14,15 @@ impl FromStr for Ball {
     type Err = Error;
 
     fn from_str(s: &str) -> Result<Self, Self::Err> {
-        let mut components = s.split(" ");
+        let (count, typ) = scan_fmt!(s, "{} {}", u32, String)
+            .with_context(|| format!("The ball string `{s}` has incorrect formatting"))?;
 
-        let count = components
-            .next()
-            .expect("Each component should have a count")
-            .parse::<u32>()
-            .expect("The count should be a number");
-
-        Ok(
-            match components
-                .next()
-                .expect("Each component should have a type")
-            {
-                "red" => Ball::Red(count),
-                "blue" => Ball::Blue(count),
-                "green" => Ball::Green(count),
-                _ => panic!("Unknown ball type"),
-            },
-        )
+        match typ.as_str() {
+            "red" => Ok(Ball::Red(count)),
+            "blue" => Ok(Ball::Blue(count)),
+            "green" => Ok(Ball::Green(count)),
+            _ => Err(anyhow!("The ball string `{s}` has an invalid type")),
+        }
     }
 }
 
@@ -65,7 +55,12 @@ impl FromStr for Draw {
 
         s.trim()
             .split(",")
-            .map(|ball| ball.trim().parse::<Ball>().expect("Failed to parse ball"))
+            .map(|ball| {
+                ball.trim()
+                    .parse::<Ball>()
+                    .with_context(|| format!("Failed to parse ball from `{ball}`"))
+                    .unwrap()
+            })
             .for_each(|ball| match ball {
                 Ball::Red(count) => draw.red += count,
                 Ball::Blue(count) => draw.blue += count,
@@ -104,25 +99,23 @@ impl FromStr for Game {
     type Err = Error;
 
     fn from_str(s: &str) -> Result<Self, Self::Err> {
-        let mut components = s.split(":");
+        let mut parts = s.split(":");
 
-        let id = components
-            .next()
-            .expect("Each game should have an associated ID identifier")
-            .split(" ")
-            .skip(1)
-            .next()
-            .expect("Each game must have an id")
-            .parse::<u32>()
-            .expect("The game id should be a number");
+        let id = scan_fmt!(
+            parts.next().expect("Each line must have an identifier"),
+            "Game {}",
+            u32
+        )
+        .with_context(|| format!("The line `{s}` has an invalid game identifier"))?;
 
-        let draws = components
+        let draws = parts
             .next()
-            .expect("Each game should have atleast one draw")
+            .expect("Each game must have a list of draws")
             .split(";")
             .map(|draw| {
                 draw.parse::<Draw>()
-                    .expect("Cannot be parsed into a valid Draw")
+                    .with_context(|| format!("The draw `{draw}` is invalid"))
+                    .unwrap()
             })
             .collect::<Vec<Draw>>();
 

@@ -1,6 +1,11 @@
 mod day1;
 mod day2;
 
+#[macro_use]
+extern crate scan_fmt;
+#[macro_use]
+extern crate anyhow;
+
 pub fn main() {
     // println!(
     //     "Solution [Day 1][Part 1]: {}",
