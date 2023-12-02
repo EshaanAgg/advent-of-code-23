@@ -1,5 +1,5 @@
 (executable
  (public_name ocaml)
- (name d1p2)
+ (name d2p2)
  (libraries ocaml)
  )

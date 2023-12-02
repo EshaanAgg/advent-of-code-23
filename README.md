@@ -17,13 +17,13 @@ Happy holidays!
         <td>1</td>
         <td><a href="https://adventofcode.com/2023/day/1">Trebuchet?!</a></td>
         <td>
-            <a href="./rust/src/day1.rs">🦀</a>
-            <a href="./golang/day1.go">🇬</a>
+            <a href="./rust/src/day1.rs">🦀</a> |
+            <a href="./golang/day1.go">🇬</a> |
             <a href="./ocaml/bin/d1p1.ml">🐪</a>
         </td>
         <td>
-            <a href="./rust/src/day1.rs">🦀</a>
-            <a href="./golang/day1.go">🇬</a>
+            <a href="./rust/src/day1.rs">🦀</a> |
+            <a href="./golang/day1.go">🇬</a> |
             <a href="./ocaml/bin/d1p2.ml">🐪</a>
         </td>
     </tr>
@@ -31,12 +31,16 @@ Happy holidays!
         <td>2</td>
         <td><a href="https://adventofcode.com/2023/day/2">Cube Conundrum</a></td>
         <td>
-            <a href="./rust/src/day2.rs">🦀</a>
-            <a href="./golang/day2/part1.go">🇬</a>
+            <a href="./rust/src/day2.rs">🦀</a> |
+            <a href="./golang/day2/part1.go">🇬</a> |
+            <a href="./ocaml/bin/d2p1.ml">🐪</a> |
+            <a href="./js/src/day2.js">🇯 🇸</a>
         </td>
         <td>
-            <a href="./rust/src/day2.rs">🦀</a>
-            <a href="./golang/day2/part2.go">🇬</a>
+            <a href="./rust/src/day2.rs">🦀</a> |
+            <a href="./golang/day2/part2.go">🇬</a> |
+            <a href="./ocaml/bin/d2p2.ml">🐪</a> |
+            <a href="./js/src/day2.js">🇯 🇸</a>
         </td>
     </tr>
 

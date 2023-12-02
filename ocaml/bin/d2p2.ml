@@ -61,28 +61,13 @@ let get_min_set s =
     in 
   aux s {red = 0; green = 0; blue = 0}
 
-let max_allowed_set = {
-    red = 12;
-    green = 13;
-    blue = 14;
-}
-
-let is_allowed_set set = 
-    set.red <= max_allowed_set.red &&
-    set.green <= max_allowed_set.green &&
-    set.blue <= max_allowed_set.blue
-let get_game_id line = 
-  let game_id_str = String.sub line 5 ((String.index line ':') - 5) in
-  int_of_string game_id_str
     
 let rec solve_part_1 channel curr_ans = 
   match input_line channel with
   | line -> 
-    let game_id = get_game_id line in
     let ind = (String.index line ':') + 2 in
     let encompassing_set = get_min_set (String.sub line ind (String.length line - ind)) in
-    let new_ans = if is_allowed_set encompassing_set then curr_ans + game_id else curr_ans in
-    solve_part_1 channel new_ans
+    solve_part_1 channel (curr_ans + (encompassing_set.red * encompassing_set.green * encompassing_set.blue))
   | exception End_of_file -> curr_ans
         
 let () =
