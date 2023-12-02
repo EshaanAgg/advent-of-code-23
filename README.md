@@ -19,14 +19,24 @@ Happy holidays!
         <td>
             <a href="./rust/src/day1.rs">🦀</a>
             <a href="./golang/day1.go">🇬</a>
-            <a href="./ocaml/bin/day1.ml">🐪</a>
+            <a href="./ocaml/bin/d1p1.ml">🐪</a>
         </td>
         <td>
             <a href="./rust/src/day1.rs">🦀</a>
             <a href="./golang/day1.go">🇬</a>
+            <a href="./ocaml/bin/d1p2.ml">🐪</a>
         </td>
     </tr>
-
+    <tr>
+        <td>2</td>
+        <td><a href="https://adventofcode.com/2023/day/2">Cube Conundrum</a></td>
+        <td>
+            <a href="./rust/src/day2.rs">🦀</a>
+        </td>
+        <td>
+            <a href="./rust/src/day2.rs">🦀</a>
+        </td>
+    </tr>
 </table>
 
 ### Disclaimers

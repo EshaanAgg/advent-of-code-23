@@ -3,7 +3,7 @@ use std::fs;
 pub fn part1(file_path: &str) -> u32 {
     fs::read_to_string(file_path)
         .expect("Something went wrong reading the file")
-        .split("\n")
+        .lines()
         .map(|line| {
             line.chars()
                 .filter(|c| c.is_digit(10))
@@ -23,7 +23,7 @@ pub fn part1(file_path: &str) -> u32 {
 pub fn part2(file_path: &str) -> u32 {
     fs::read_to_string(file_path)
         .expect("Something went wrong reading the file")
-        .split("\n")
+        .lines()
         .map(|line| {
             line.to_string()
                 .replace("zero", "zero0zero")

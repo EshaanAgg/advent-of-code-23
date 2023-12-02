@@ -44,7 +44,6 @@ let find_last_digit str =
       else find_last_digit str (curr - 1)
   in find_last_digit str (String.length str - 1)
 
-
 (* 
   A recursive function which reads in a file at a time from the channel 
   and then calls itself again to process the next line 
