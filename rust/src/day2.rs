@@ -138,7 +138,7 @@ pub fn part1(file_path: &str) -> u32 {
     };
 
     fs::read_to_string(file_path)
-        .expect("Something went wrong reading the file")
+        .expect("Unable to read the input file")
         .lines()
         .map(|line| {
             line.parse::<Game>()
@@ -151,7 +151,7 @@ pub fn part1(file_path: &str) -> u32 {
 
 pub fn part2(file_path: &str) -> u32 {
     fs::read_to_string(file_path)
-        .expect("Something went wrong reading the file")
+        .expect("Unable to read the input file")
         .lines()
         .map(|line| {
             line.parse::<Game>()

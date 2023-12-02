@@ -32,11 +32,14 @@ Happy holidays!
         <td><a href="https://adventofcode.com/2023/day/2">Cube Conundrum</a></td>
         <td>
             <a href="./rust/src/day2.rs">🦀</a>
+            <a href="./golang/day2/part1.go">🇬</a>
         </td>
         <td>
             <a href="./rust/src/day2.rs">🦀</a>
+            <a href="./golang/day2/part2.go">🇬</a>
         </td>
     </tr>
+
 </table>
 
 ### Disclaimers
