@@ -48,11 +48,13 @@ Happy holidays!
         <td><a href="https://adventofcode.com/2023/day/3">Gear Ratios</a></td>
         <td>
             <a href="./rust/src/day3.rs">🦀</a> |
-            <a href="./golang/day3/part1.go">🇬</a>
+            <a href="./golang/day3/part1.go">🇬</a> |
+            <a href="./ocaml/bin/d3p1.ml">🐪</a> 
         </td>
         <td>
             <a href="./rust/src/day3.rs">🦀</a> |
             <a href="./golang/day3/part2.go">🇬</a> |
+            <a href="./ocaml/bin/d3p2.ml">🐪</a> |
             <a href="./js/src/day3.js">🇯 🇸</a>
         </td>
     </tr>
