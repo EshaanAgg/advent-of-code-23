@@ -58,13 +58,23 @@ Happy holidays!
             <a href="./js/src/day3.js">🇯 🇸</a>
         </td>
     </tr>
-
+    <tr>
+        <td>4</td>
+        <td><a href="https://adventofcode.com/2023/day/4">Scratchcards</a></td>
+        <td>
+            <a href="./rust/src/day4.rs">🦀</a> 
+        </td>
+        <td>
+            <a href="./rust/src/day4.rs">🦀</a>
+        </td>
+    </tr>
 </table>
 
 ### Disclaimers
 
 - I hate the fact that I have to use 🇬 to represent `Go`. Please Unicode gods, grant us with a gopher emoji🙏.
-- This is the first time I am using `OCaml` and I am still on the verge whether I hate it or I find it bearable. For the most part my `OCaml` code is going to resemble a lot of that the Primeagen, with me trying to take the reigns in between.
+- This is the first time I am using `OCaml` and I am still on the verge whether I hate it or I find it bearable. I am super new to the paradigms of functional programming and the notion that "everything is a list", so I use the `Primeagen's` daily AOC streams to reason out a good thought process to model the problem, and then try to write the code myself. It's tiring, but it gives me a cool nerdy rush.
+- I have no good `JS` emojis as well -\_- I don't plan on doing JS as a language this AOC, but rather love it for the purpose of speed-running and flexing.
 
 [^aoc]:
     [Advent of Code](https://adventofcode.com) – An annual event of Christmas-oriented programming challenges started December 2015.

@@ -1,6 +1,7 @@
 mod day1;
 mod day2;
 mod day3;
+mod day4;
 
 #[macro_use]
 extern crate scan_fmt;
@@ -9,12 +10,12 @@ extern crate anyhow;
 
 pub fn main() {
     println!(
-        "Solution [Day 3][Part 1]: {}",
-        day3::part1("../data/3/input.txt")
+        "Solution [Day 4][Part 1]: {}",
+        day4::part1("../data/4/input.txt")
     );
 
     println!(
-        "Solution [Day 3][Part 2]: {}",
-        day3::part2("../data/3/input.txt")
+        "Solution [Day 4][Part 2]: {}",
+        day4::part2("../data/4/input.txt")
     );
 }
