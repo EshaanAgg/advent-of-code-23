@@ -62,10 +62,21 @@ Happy holidays!
         <td>4</td>
         <td><a href="https://adventofcode.com/2023/day/4">Scratchcards</a></td>
         <td>
-            <a href="./rust/src/day4.rs">🦀</a> 
+            <a href="./rust/src/day4.rs">🦀</a> |
+            <a href="./ocaml/bin/d4p1.ml">🐪</a> 
         </td>
         <td>
             <a href="./rust/src/day4.rs">🦀</a>
+        </td>
+    </tr>
+    <tr>
+        <td>5</td>
+        <td><a href="https://adventofcode.com/2023/day/5">If You Give A Seed A Fertilizer</a></td>
+        <td>
+            <a href="./rust/src/day5.rs">🦀</a> 
+        </td>
+        <td>
+            <a href="./rust/src/day5.rs">🦀</a>
         </td>
     </tr>
 </table>
