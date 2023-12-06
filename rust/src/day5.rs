@@ -105,7 +105,7 @@ pub fn part2(file_path: &str) -> u64 {
     let content = fs::read_to_string(file_path).expect("There was an error in reading the file");
     let mut parts = content.split("\n\n");
 
-    let mut seeds: Vec<u64> = parts
+    let seeds: Vec<u64> = parts
         .next()
         .expect("The input must have seeds in the first part")
         .split(" ")
