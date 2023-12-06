@@ -79,6 +79,16 @@ Happy holidays!
             <a href="./rust/src/day5.rs">🦀</a>
         </td>
     </tr>
+    <tr>
+        <td>6</td>
+        <td><a href="https://adventofcode.com/2023/day/6">Wait For It</a></td>
+        <td>
+            <a href="./rust/src/day6.rs">🦀</a> 
+        </td>
+        <td>
+            <a href="./rust/src/day6.rs">🦀</a>
+        </td>
+    </tr>
 </table>
 
 ### Disclaimers
