@@ -1,3 +1,5 @@
+mod d7p1;
+mod d7p2;
 mod day1;
 mod day2;
 mod day3;
@@ -12,12 +14,12 @@ extern crate anyhow;
 
 pub fn main() {
     println!(
-        "Solution [Day 6][Part 1]: {}",
-        day6::part1("../data/6/input.txt")
+        "Solution [Day 7][Part 1]: {}",
+        d7p1::part1("../data/7/input.txt")
     );
 
     println!(
-        "Solution [Day 6][Part 2]: {}",
-        day6::part2("../data/6/input.txt")
+        "Solution [Day 7][Part 2]: {}",
+        d7p2::part2("../data/7/input.txt")
     );
 }

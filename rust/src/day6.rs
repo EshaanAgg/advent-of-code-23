@@ -1,7 +1,4 @@
-use std::{
-    cmp::{max, min},
-    fs,
-};
+use std::fs;
 
 fn get_sol_count(t: i64, d: i64) -> u64 {
     let b = -(t as f64);
@@ -11,21 +8,10 @@ fn get_sol_count(t: i64, d: i64) -> u64 {
     if dis < 0 as f64 {
         0
     } else {
-        let x1 = ((-b - dis.sqrt()) / (2 as f64)) as i64;
-        let x2 = ((-b + dis.sqrt()) / (2 as f64)) as i64;
-        let mut mi = t;
-        let mut ma = 0;
-        for del in -1..3 {
-            let xn1 = x1 + del;
-            if xn1 * xn1 - t * xn1 + d < 0 {
-                mi = min(mi, xn1);
-            }
-
-            let xn2 = x2 + del;
-            if xn2 * xn2 - t * xn2 + d < 0 {
-                ma = max(ma, xn2);
-            }
-        }
+        let x1 = (-b - dis.sqrt()) / (2 as f64);
+        let x2 = (-b + dis.sqrt()) / (2 as f64);
+        let mi = x1.floor() + 1.0;
+        let ma = x2.ceil() - 1.0;
 
         ma as u64 - mi as u64 + 1
     }

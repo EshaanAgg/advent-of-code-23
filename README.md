@@ -89,6 +89,16 @@ Happy holidays!
             <a href="./rust/src/day6.rs">🦀</a>
         </td>
     </tr>
+    <tr>
+        <td>7</td>
+        <td><a href="https://adventofcode.com/2023/day/7">Camel Cards</a></td>
+        <td>
+            <a href="./rust/src/d7p1.rs">🦀</a> 
+        </td>
+        <td>
+            <a href="./rust/src/d7p2.rs">🦀</a>
+        </td>
+    </tr>
 </table>
 
 ### Disclaimers
