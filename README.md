@@ -99,6 +99,16 @@ Happy holidays!
             <a href="./rust/src/d7p2.rs">🦀</a>
         </td>
     </tr>
+    <tr>
+        <td>8</td>
+        <td><a href="https://adventofcode.com/2023/day/8">Haunted Wasteland</a></td>
+        <td>
+            <a href="./rust/src/day8.rs">🦀</a> 
+        </td>
+        <td>
+            <a href="./rust/src/day8.rs">🦀</a>
+        </td>
+    </tr>
 </table>
 
 ### Disclaimers
