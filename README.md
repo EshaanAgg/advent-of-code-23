@@ -109,6 +109,16 @@ Happy holidays!
             <a href="./rust/src/day8.rs">🦀</a>
         </td>
     </tr>
+    <tr>
+        <td>9</td>
+        <td><a href="https://adventofcode.com/2023/day/9">Mirage Maintenance</a></td>
+        <td>
+            <a href="./rust/src/day9.rs">🦀</a> 
+        </td>
+        <td>
+            <a href="./rust/src/day9.rs">🦀</a>
+        </td>
+    </tr>
 </table>
 
 ### Disclaimers
