@@ -113,10 +113,12 @@ Happy holidays!
         <td>9</td>
         <td><a href="https://adventofcode.com/2023/day/9">Mirage Maintenance</a></td>
         <td>
-            <a href="./rust/src/day9.rs">🦀</a> 
+            <a href="./rust/src/day9.rs">🦀</a> |
+            <a href="./ocaml/bin/d9p1.ml">🐪</a> 
         </td>
         <td>
-            <a href="./rust/src/day9.rs">🦀</a>
+            <a href="./rust/src/day9.rs">🦀</a> |
+            <a href="./ocaml/bin/d9p2.ml">🐪</a> 
         </td>
     </tr>
     <tr>
