@@ -119,6 +119,16 @@ Happy holidays!
             <a href="./rust/src/day9.rs">🦀</a>
         </td>
     </tr>
+    <tr>
+        <td>10</td>
+        <td><a href="https://adventofcode.com/2023/day/10">Pipe Maze</a></td>
+        <td>
+            <a href="./rust/src/day10.rs">🦀</a> 
+        </td>
+        <td>
+            <a href="./rust/src/day10.rs">🦀</a>
+        </td>
+    </tr>
 </table>
 
 ### Disclaimers
