@@ -93,7 +93,8 @@ Happy holidays!
         <td>7</td>
         <td><a href="https://adventofcode.com/2023/day/7">Camel Cards</a></td>
         <td>
-            <a href="./rust/src/d7p1.rs">🦀</a> 
+            <a href="./rust/src/d7p1.rs">🦀</a> |
+            <a href="./ocaml/bin/dyp1.ml">🐪</a> 
         </td>
         <td>
             <a href="./rust/src/d7p2.rs">🦀</a>
