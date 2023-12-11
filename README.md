@@ -131,6 +131,16 @@ Happy holidays!
             <a href="./rust/src/day10.rs">🦀</a>
         </td>
     </tr>
+    <tr>
+        <td>11</td>
+        <td><a href="https://adventofcode.com/2023/day/11">Cosmic Expansion</a></td>
+        <td>
+            <a href="./rust/src/day11.rs">🦀</a> 
+        </td>
+        <td>
+            <a href="./rust/src/day11.rs">🦀</a>
+        </td>
+    </tr>
 </table>
 
 ### Disclaimers
