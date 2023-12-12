@@ -142,6 +142,16 @@ Happy holidays!
             <a href="./rust/src/day11.rs">🦀</a>
         </td>
     </tr>
+    <tr>
+        <td>12</td>
+        <td><a href="https://adventofcode.com/2023/day/12">Hot Springs</a></td>
+        <td>
+            <a href="./rust/src/day12.rs">🦀</a> 
+        </td>
+        <td>
+            <a href="./rust/src/day12.rs">🦀</a>
+        </td>
+    </tr>
 </table>
 
 ### Disclaimers

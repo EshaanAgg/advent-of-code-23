@@ -1,13 +1,13 @@
-mod day11;
+mod day12;
 
 pub fn main() {
     println!(
-        "Solution [Day 11][Part 1]: {}",
-        day11::part1("../data/11/input.txt")
+        "Solution [Day 12][Part 1]: {}",
+        day12::part1("../data/12/input.txt")
     );
 
     println!(
-        "Solution [Day 11][Part 2]: {}",
-        day11::part2("../data/11/input.txt", 1000000)
+        "Solution [Day 12][Part 2]: {}",
+        day12::part2("../data/12/input.txt")
     );
 }
