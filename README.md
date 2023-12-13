@@ -152,6 +152,15 @@ Happy holidays!
             <a href="./rust/src/day12.rs">🦀</a>
         </td>
     </tr>
+    <tr>
+        <td>13</td>
+        <td><a href="https://adventofcode.com/2023/day/13">Point of Incidence</a></td>
+        <td>
+            <a href="./rust/src/day13.rs">🦀</a> 
+        </td>
+        <td>
+        </td>
+    </tr>
 </table>
 
 ### Disclaimers
