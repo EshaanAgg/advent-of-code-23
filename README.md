@@ -162,6 +162,16 @@ Happy holidays!
             <a href="./rust/src/day13.rs">🦀</a> 
         </td>
     </tr>
+    <tr>
+        <td>14</td>
+        <td><a href="https://adventofcode.com/2023/day/14">Parabolic Reflector Dish</a></td>
+        <td>
+            <a href="./rust/src/day14.rs">🦀</a> 
+        </td>
+        <td>
+            <a href="./rust/src/day14.rs">🦀</a> 
+        </td>
+    </tr>
 </table>
 
 ### Disclaimers
