@@ -172,6 +172,16 @@ Happy holidays!
             <a href="./rust/src/day14.rs">🦀</a> 
         </td>
     </tr>
+    <tr>
+        <td>15</td>
+        <td><a href="https://adventofcode.com/2023/day/15">Lens Library</a></td>
+        <td>
+            <a href="./rust/src/day15.rs">🦀</a> 
+        </td>
+        <td>
+            <a href="./rust/src/day15.rs">🦀</a> 
+        </td>
+    </tr>
 </table>
 
 ### Disclaimers
