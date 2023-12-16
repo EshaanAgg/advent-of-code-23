@@ -182,6 +182,16 @@ Happy holidays!
             <a href="./rust/src/day15.rs">🦀</a> 
         </td>
     </tr>
+    <tr>
+        <td>16</td>
+        <td><a href="https://adventofcode.com/2023/day/16">The Floor Will Be Lava</a></td>
+        <td>
+            <a href="./rust/src/day16.rs">🦀</a> 
+        </td>
+        <td>
+            <a href="./rust/src/day16.rs">🦀</a> 
+        </td>
+    </tr>
 </table>
 
 ### Disclaimers
