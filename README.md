@@ -192,6 +192,16 @@ Happy holidays!
             <a href="./rust/src/day16.rs">🦀</a> 
         </td>
     </tr>
+    <tr>
+        <td>17</td>
+        <td><a href="https://adventofcode.com/2023/day/17">Clusmy Crucible</a></td>
+        <td>
+            <a href="./rust/src/day17.rs">🦀</a> 
+        </td>
+        <td>
+            <a href="./rust/src/day17.rs">🦀</a> 
+        </td>
+    </tr>
 </table>
 
 ### Disclaimers
