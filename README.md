@@ -202,6 +202,16 @@ Happy holidays!
             <a href="./rust/src/day17.rs">🦀</a> 
         </td>
     </tr>
+    <tr>
+        <td>18</td>
+        <td><a href="https://adventofcode.com/2023/day/18">Lavaduct Lagoon</a></td>
+        <td>
+            <a href="./rust/src/day18.rs">🦀</a> 
+        </td>
+        <td>
+            <a href="./rust/src/day18.rs">🦀</a> 
+        </td>
+    </tr>
 </table>
 
 ### Disclaimers
