@@ -212,6 +212,16 @@ Happy holidays!
             <a href="./rust/src/day18.rs">🦀</a> 
         </td>
     </tr>
+    <tr>
+        <td>19</td>
+        <td><a href="https://adventofcode.com/2023/day/19">Aplenty</a></td>
+        <td>
+            <a href="./rust/src/day19.rs">🦀</a> 
+        </td>
+        <td>
+            <!-- <a href="./rust/src/day19.rs">🦀</a>  -->
+        </td>
+    </tr>
 </table>
 
 ### Disclaimers
