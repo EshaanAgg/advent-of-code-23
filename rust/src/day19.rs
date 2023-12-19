@@ -1,4 +1,4 @@
-use std::{collections::HashMap, fs, str::FromStr};
+use std::{collections::HashMap, fs, str::FromStr, vec};
 
 #[derive(Debug)]
 struct Part {
@@ -6,6 +6,168 @@ struct Part {
     m: i64,
     a: i64,
     s: i64,
+}
+
+#[derive(Debug, Clone, Copy)]
+struct PartRange {
+    x: (i64, i64),
+    m: (i64, i64),
+    a: (i64, i64),
+    s: (i64, i64),
+}
+
+impl PartRange {
+    fn get_count(&self) -> usize {
+        ((self.x.1 - self.x.0 + 1)
+            * (self.m.1 - self.m.0 + 1)
+            * (self.a.1 - self.a.0 + 1)
+            * (self.s.1 - self.s.0 + 1)) as usize
+    }
+
+    fn get_range(&self, identifier: char) -> (i64, i64) {
+        match identifier {
+            'x' => self.x,
+            'm' => self.m,
+            'a' => self.a,
+            's' => self.s,
+            _ => panic!("Invalid identifier passed"),
+        }
+    }
+
+    fn clone_with_change(&self, property: char, bound: char, value: i64) -> PartRange {
+        let mut p = self.clone();
+
+        match property {
+            'x' => match bound {
+                'l' => p.x.0 = value,
+                'u' => p.x.1 = value,
+                _ => panic!("Invalid bound passed"),
+            },
+            'm' => match bound {
+                'l' => p.m.0 = value,
+                'u' => p.m.1 = value,
+                _ => panic!("Invalid bound passed"),
+            },
+            'a' => match bound {
+                'l' => p.a.0 = value,
+                'u' => p.a.1 = value,
+                _ => panic!("Invalid bound passed"),
+            },
+            's' => match bound {
+                'l' => p.s.0 = value,
+                'u' => p.s.1 = value,
+                _ => panic!("Invalid bound passed"),
+            },
+            _ => panic!("Invalid property passed"),
+        };
+
+        p
+    }
+
+    fn apply_rule(&self, rule: &Rule) -> Vec<(PartRange, Option<RuleApplyResult>)> {
+        let (low, high) = self.get_range(rule.identifier);
+
+        match rule.operator {
+            '>' => {
+                if low > rule.value {
+                    vec![(
+                        self.clone(),
+                        Some(RuleApplyResult::get_result(rule.workflow.as_str())),
+                    )]
+                } else {
+                    vec![
+                        (
+                            self.clone_with_change(rule.identifier, 'l', rule.value + 1),
+                            Some(RuleApplyResult::get_result(rule.workflow.as_str())),
+                        ),
+                        (
+                            self.clone_with_change(rule.identifier, 'u', rule.value),
+                            None,
+                        ),
+                    ]
+                }
+            }
+            '<' => {
+                if high < rule.value {
+                    vec![(
+                        self.clone(),
+                        Some(RuleApplyResult::get_result(rule.workflow.as_str())),
+                    )]
+                } else {
+                    vec![
+                        (
+                            self.clone_with_change(rule.identifier, 'l', rule.value),
+                            None,
+                        ),
+                        (
+                            self.clone_with_change(rule.identifier, 'u', rule.value - 1),
+                            Some(RuleApplyResult::get_result(rule.workflow.as_str())),
+                        ),
+                    ]
+                }
+            }
+            _ => panic!("Operator not implemented in the apply_rule function"),
+        }
+    }
+
+    fn apply_workflow(&self, workflow: &Workflow) -> Vec<(PartRange, RuleApplyResult)> {
+        let mut results: Vec<(PartRange, RuleApplyResult)> = Vec::new();
+        let mut to_process: Vec<PartRange> = vec![self.clone()];
+
+        for rule in workflow.rules.iter() {
+            let mut next_to_process: Vec<PartRange> = Vec::new();
+
+            to_process.iter().for_each(|p| {
+                p.apply_rule(rule).iter().for_each(|(part_range, next)| {
+                    if let Some(next) = next {
+                        results.push((*part_range, next.clone()));
+                    } else {
+                        next_to_process.push(*part_range);
+                    }
+                })
+            });
+
+            to_process = next_to_process;
+        }
+
+        for part_range in to_process.iter() {
+            results.push((
+                *part_range,
+                RuleApplyResult::get_result(workflow.next_workflow.as_str()),
+            ));
+        }
+
+        results
+    }
+
+    fn accepted_count(&self, workflows: &HashMap<String, Workflow>) -> usize {
+        let mut to_process: Vec<(PartRange, String)> = vec![(self.clone(), "in".to_string())];
+        let mut total = 0;
+
+        while to_process.len() != 0 {
+            let mut next_to_process: Vec<(PartRange, String)> = Vec::new();
+
+            to_process.iter().for_each(|(p, workflow_name)| {
+                p.apply_workflow(
+                    workflows
+                        .get(workflow_name.as_str())
+                        .expect("The workflow with the provided does not exist"),
+                )
+                .iter()
+                .for_each(|(part_range, next)| match next {
+                    RuleApplyResult::Accepted => total += part_range.get_count(),
+                    RuleApplyResult::Rejected => (),
+                    RuleApplyResult::Workflow(next_workflow) => {
+                        next_to_process.push((part_range.clone(), next_workflow.clone()))
+                    }
+                });
+            });
+
+            to_process = next_to_process;
+        }
+
+        total
+    }
 }
 
 impl FromStr for Part {
@@ -74,7 +236,7 @@ impl Part {
     }
 }
 
-#[derive(Debug)]
+#[derive(Debug, Clone)]
 enum RuleApplyResult {
     Workflow(String),
     Accepted,
@@ -181,6 +343,31 @@ pub fn part1(file_path: &str) -> usize {
         .sum()
 }
 
+pub fn part2(file_path: &str) -> usize {
+    let mut workflows = HashMap::new();
+
+    fs::read_to_string(file_path)
+        .expect("Failed to read the file")
+        .split("\n\n")
+        .next()
+        .expect("The input must have workflows")
+        .lines()
+        .for_each(|line| {
+            let workflow = line
+                .parse::<Workflow>()
+                .expect("Failed to parse a workflow");
+            workflows.insert(workflow.name.clone(), workflow);
+        });
+
+    PartRange {
+        x: (1, 4000),
+        m: (1, 4000),
+        a: (1, 4000),
+        s: (1, 4000),
+    }
+    .accepted_count(&workflows)
+}
+
 #[cfg(test)]
 mod tests {
     use super::*;
@@ -190,9 +377,8 @@ mod tests {
         assert_eq!(part1("../data/19/test.txt"), 19114);
     }
 
-    // #[test]
-    // fn test_2() {
-    //     assert_eq!(part2("../data/17/test1.txt"), 94);
-    //     assert_eq!(part2("../data/17/test2.txt"), 71);
-    // }
+    #[test]
+    fn test_2() {
+        assert_eq!(part2("../data/19/test.txt"), 167409079868000);
+    }
 }

@@ -219,7 +219,7 @@ Happy holidays!
             <a href="./rust/src/day19.rs">🦀</a> 
         </td>
         <td>
-            <!-- <a href="./rust/src/day19.rs">🦀</a>  -->
+            <a href="./rust/src/day19.rs">🦀</a> 
         </td>
     </tr>
 </table>
