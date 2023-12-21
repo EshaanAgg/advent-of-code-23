@@ -1,16 +1,15 @@
-mod day19;
+mod day21;
 
-#[macro_use]
-extern crate scan_fmt;
+extern crate queues;
 
 pub fn main() {
     println!(
-        "Solution [Day 19][Part 1]: {}",
-        day19::part1("../data/19/input.txt")
+        "Solution [Day 21][Part 1]: {}",
+        day21::part1("../data/21/input.txt", 64)
     );
 
-    println!(
-        "Solution [Day 19][Part 2]: {}",
-        day19::part2("../data/19/input.txt")
-    );
+    // println!(
+    //     "Solution [Day 21][Part 2]: {}",
+    //     day21::part2("../data/21/input.txt")
+    // );
 }

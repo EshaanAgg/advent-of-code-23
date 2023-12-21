@@ -222,6 +222,26 @@ Happy holidays!
             <a href="./rust/src/day19.rs">🦀</a> 
         </td>
     </tr>
+    <tr>
+        <td>19</td>
+        <td><a href="https://adventofcode.com/2023/day/20">Pulse Propagation</a></td>
+        <td>
+            <!-- <a href="./rust/src/day19.rs">🦀</a>  -->
+        </td>
+        <td>
+            <!-- <a href="./rust/src/day19.rs">🦀</a>  -->
+        </td>
+    </tr>
+    <tr>
+        <td>19</td>
+        <td><a href="https://adventofcode.com/2023/day/21">Step Counter</a></td>
+        <td>
+            <a href="./rust/src/day21.rs">🦀</a> 
+        </td>
+        <td>
+            <!-- <a href="./rust/src/day19.rs">🦀</a>  -->
+        </td>
+    </tr>
 </table>
 
 ### Disclaimers
